@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+	    android:paddingLeft="23dp"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Current User:"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:text="-"
+            local:MvxBind="Text CurrentUser"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+            <LinearLayout
+			    local:MvxBind="Visibility LoginModeVisible,Converter=Visibility"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+          <RadioButton
+              android:id="@+id/rdoPIN"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              local:MvxBind="Checked LoginWithPIN"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:text="Login with PIN" />
+          <RadioButton
+              android:id="@+id/rdoUserName"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:textAppearance="?android:attr/textAppearanceLarge"
+              android:text="Login with Username / Password"
+              local:MvxBind="Checked LoginWithUser" />
+
+            </LinearLayout>
+
+    <LinearLayout
+        local:MvxBind="Visibility LoginWithPIN,Converter=Visibility"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="PIN."
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="0dp"
+            android:layout_weight="0.30"
+            android:layout_height="wrap_content"
+            android:hint="Work Number"
+            android:id="@+id/lblPIN" />
+        <EditText
+            android:layout_weight="0.70"
+            android:layout_width="0dp"
+            local:MvxBind="Text UserPin"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPIN"
+            android:inputType="textPassword" />
+    </LinearLayout>
+    <LinearLayout
+        local:MvxBind="Visibility LoginWithPIN,Converter=InvertedVisibility"
+		
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Username"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="0dp"
+            android:layout_weight="0.40"
+            android:layout_height="wrap_content"
+            android:hint="Work Number"
+            android:id="@+id/lblUserName" />
+        <EditText
+            android:layout_weight="0.60"
+            android:layout_width="0dp"
+            local:MvxBind="Text UserName"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtUserName"
+             />
+    </LinearLayout>
+    <LinearLayout
+		local:MvxBind="Visibility LoginWithPIN,Converter=InvertedVisibility"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:text="Password"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="0dp"
+            android:layout_weight="0.40"
+            android:layout_height="wrap_content"
+            android:hint="Work Number"
+            android:id="@+id/lblPassword" />
+        <EditText
+            android:layout_weight="0.60"
+            android:layout_width="0dp"
+            local:MvxBind="Text Password"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtPassword"
+            android:inputType="textPassword" />
+    </LinearLayout>
+
+</LinearLayout>

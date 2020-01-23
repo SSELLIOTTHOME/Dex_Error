@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="steven.droid" android:versionName="3.2.6.73" android:versionCode="3260073" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="17" android:targetSdkVersion="28" />
+	<application android:label="Dialog Test" android:theme="@style/Theme.Piranamobile"></application>
+</manifest>

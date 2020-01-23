@@ -1,0 +1,448 @@
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flow="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:tag="parent"
+    android:orientation="vertical"
+    android:paddingTop="10dip">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#06817B"
+        android:textSize="35dp"
+        android:text="Dashboard"
+        android:gravity="center"
+        android:typeface="sans" />
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dip">
+        <Pirana.Droid.FlowLayout
+            android:id="@+id/pnlControlPanel"
+            flow:horizontalSpacing="30dip"
+            flow:verticalSpacing="30dip"
+            flow:debugDraw="false"
+        
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:paddingLeft="10dip">
+
+
+          <LinearLayout
+                android:text="0 Request"
+                android:id="@+id/btnRequests"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:outlineProvider="bounds"
+                android:clickable="true"
+                flow:MvxBind="Text Requests;Visibility RequestVisible, Converter=Visibility"
+                    
+                style="@style/button_text"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fffff1"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="2.0"
+                android:textSize="40dp"
+                flow:MvxBind="Text Requests" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fffff1"
+                android:shadowColor="#000000"
+                android:shadowDx="0.0"
+                android:shadowDy="0.0"
+                android:shadowRadius="2.0"
+                android:textSize="15dp"
+                android:text="Requests" />
+          </LinearLayout>
+          
+          
+            <LinearLayout
+                android:text="0 Overdue"
+                android:id="@+id/btnAllWork"
+                android:elevation="10dp"
+                android:orientation="vertical"
+                android:outlineProvider="bounds"
+                android:clickable="true"
+                style="@style/button_text"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fffff1"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="40dp"
+                    flow:MvxBind="Text AllWork" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fffff1"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="15dp"
+                    android:text="My Work" />
+            </LinearLayout>
+            <LinearLayout
+                android:text="0 Late"
+                android:id="@+id/btnLate"
+                android:orientation="vertical"
+                android:clickable="true"
+                style="@style/button_text"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fffff1"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="40dp"
+                    flow:MvxBind="Text LateWork"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:textColor="#fffff1"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="15dp"
+                    android:text="Late" />
+            </LinearLayout>
+            <LinearLayout
+                android:text="0 Late"
+                android:id="@+id/btnOverDue"
+                android:orientation="vertical"
+                android:clickable="true"
+                style="@style/button_text"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fffff1"
+                    android:textSize="40dp"
+                    flow:MvxBind="Text OverdueWork"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:textColor="#fffff1"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="15dp"
+                    android:text="Overdue" />
+            </LinearLayout>
+            <LinearLayout
+                android:text="0 Late"
+                android:id="@+id/btnPending"
+                android:orientation="vertical"
+                android:clickable="true"
+                style="@style/button_text"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fffff1"
+                    android:textSize="40dp"
+                    flow:MvxBind="Text PendingWork"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:textColor="#fffff1"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="15dp"
+                    android:text="Pending" />
+            </LinearLayout>
+            <LinearLayout
+                android:text="0 Late"
+                android:id="@+id/btnDue"
+                android:orientation="vertical"
+                android:clickable="true"
+                style="@style/button_text"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fffff1"
+                    android:textSize="40dp"
+                    flow:MvxBind="Text DueWork"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:textColor="#fffff1"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="15dp"
+                    android:text="Due" />
+            </LinearLayout>
+            <LinearLayout
+                android:text="0 Overdue"
+                android:id="@+id/btnOnHold"
+                android:orientation="vertical"
+                android:clickable="true"
+                style="@style/button_text"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fffff1"
+                    android:textSize="40dp"
+                    flow:MvxBind="Text OnHold"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:textColor="#fffff1"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="15dp"
+                    android:text="On Hold" />
+            </LinearLayout>
+            <LinearLayout
+                android:text="0 Overdue"
+                android:id="@+id/btnInProgress"
+                android:orientation="vertical"
+                android:clickable="true"
+                style="@style/button_text"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fffff1"
+                    android:textSize="40dp"
+                    flow:MvxBind="Text InProgress"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:textColor="#fffff1"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="15dp"
+                    android:text="In Prog" />
+            </LinearLayout>
+            <LinearLayout
+                android:text="0 Overdue"
+                android:id="@+id/btnNotStarted"
+                android:orientation="vertical"
+                android:clickable="true"
+                style="@style/button_text"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fffff1"
+                    android:textSize="40dp"
+                    flow:MvxBind="Text NotStarted"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:textColor="#fffff1"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="15dp"
+                    android:text="N.Started" />
+            </LinearLayout>
+            <LinearLayout
+                android:text="0 Overdue"
+                android:id="@+id/btnThisWeek"
+                android:orientation="vertical"
+                android:clickable="true"
+                style="@style/button_text"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fffff1"
+                    android:textSize="40dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    flow:MvxBind="Text ThisWeek"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:textColor="#fffff1"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="15dp"
+                    android:text="T.Week" />
+            </LinearLayout>
+            <LinearLayout
+                android:text="0 Closed"
+                android:id="@+id/btnClosed"
+                android:orientation="vertical"
+                android:clickable="true"
+                style="@style/button_text"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#fffff1"
+                    android:textSize="40dp"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    flow:MvxBind="Text Closed"
+                    android:gravity="center" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom"
+                    android:textColor="#fffff1"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="15dp"
+                    android:text="Closed" />
+            </LinearLayout>
+            <LinearLayout
+                android:text="New"
+                android:id="@+id/btnNewWork"
+                android:orientation="vertical"
+                android:clickable="true"
+                style="@style/button_text2"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="500dp"
+                    android:textColor="#fffff1"               
+                    
+                    android:textSize="10dp"
+                    android:text="New"
+                     />
+            </LinearLayout>
+            <LinearLayout
+                android:text="All"
+                android:id="@+id/btnAvailWork"
+                android:orientation="vertical"
+                android:clickable="true"
+                style="@style/button_text2"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+					       
+                    android:textColor="#fffff1"
+                    android:text="All"
+                  />
+            </LinearLayout>
+            <LinearLayout
+                android:text="All"
+                android:id="@+id/btnSubjectInfo"
+                android:orientation="vertical"
+                android:clickable="true"
+                style="@style/button_text2"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+					       
+                    android:textColor="#fffff1"
+                    android:text="Info"
+                  />
+            </LinearLayout>
+            <LinearLayout
+                android:text="Sync"
+                android:id="@+id/btnSync"
+                android:orientation="vertical"
+                android:clickable="true"
+                style="@style/button_text2"
+                android:layout_width="fill_parent"
+                android:layout_height="200dip">
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:textColor="#fffff1"
+                    android:shadowColor="#000000"
+                    android:shadowDx="0.0"
+                    android:shadowDy="0.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="25dp"
+                    android:text="Sync"
+                    android:gravity="center" />
+            </LinearLayout>
+        </Pirana.Droid.FlowLayout>
+    </ScrollView>
+</LinearLayout>
